@@ -4,7 +4,7 @@ services:
 
   influxdb:
     hostname: influxdb
-    image: quay.io/influxdb/influxdb:v2.6.1
+    image: influxdb:2.6.1
     container_name: influxdb-2
     ports:
       - '8099:8086'
@@ -17,3 +17,7 @@ services:
 
 # volumes:
 #   influxdb-storage2_0:
+
+volumes:
+  influxdb-storage2_0:
+    external: true
